@@ -1,0 +1,22 @@
+How to deploy node.js to Heroku:
+Documents:
+https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
+https://devcenter.heroku.com/articles/git
+1.	Download Heroku CLI 
+2.	Open cmd CLI->heroku login     //redirect to browser 
+3.	Authenticate on browser
+4.	Check versions: npm -—version   git --version      node  --version 
+5.	Change listening port 3000 on local host. To enable Heroku to run the app, the port is dynamic decided by Heroku,  use app.listen( process.env.PORT). 
+false: App will work both on local host and Heroku     3000|process.env.PORT  causes time out error when deploy on Heroku. 
+6.	Creat file Procfile in the same folder of app.js   web:node app.js    
+7.	Save files into heroku repository.
+8.  go to the dirctory of the project.
+8.	git  init         git add .   git commit -a -m “ uploading code”    
+9.	heroku create                     // create app server on heroku
+10.	git push heroku master
+11.	heroku open                        //open the App
+12.	In package.json file, make sure script is defined.
+13.	 "scripts": {
+14.	    "start":"node app.js"
+15.	  },
+16.	
