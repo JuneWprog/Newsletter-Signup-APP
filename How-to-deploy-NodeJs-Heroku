@@ -7,7 +7,7 @@ https://devcenter.heroku.com/articles/git
 3.	Authenticate on browser
 4.	Check versions: npm -—version   git --version      node  --version 
 5.	Change listening port to 3000  if run on local host. To enable Heroku to run the app, the port is dynamic decided by Heroku,  use app.listen( process.env.PORT). 
-false: App will work both on local host and Heroku     3000|process.env.PORT  causes time out error when deploy on Heroku. 
+	app.listen( process.env.PORT ||3000) will make it accessible from both local host and Heroku.
 6.	Creat file Procfile in the same folder of app.js   web:node app.js    
 7.	Save files into heroku repository.
 8.  go to the dirctory of the project.
