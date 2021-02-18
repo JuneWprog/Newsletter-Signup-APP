@@ -60,5 +60,5 @@ app.post("/failure", function(req, res) {
 // })
 //for heroku, use dynamic port (process.env.PORT)
 app.listen(process.env.PORT,()=>{
-    console.log("app: newletter@1.0.0 listen on http://tranquil-caverns-27200")
+    console.log("app: newletter@1.0.0 listen on http://tranquil-caverns-27200.herokuapp.com")
 })
